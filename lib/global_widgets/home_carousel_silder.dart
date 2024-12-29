@@ -21,7 +21,7 @@ class _Home_Carousel_SliderState extends State<Home_Carousel_Slider> {
       children: [
         CarouselSlider(
           options: CarouselOptions(
-            height: 200,
+            height: 180,
             viewportFraction: 0.9,
             onPageChanged: (currentIndex, reason) {
               _selectedIndex.value = currentIndex;
@@ -37,7 +37,7 @@ class _Home_Carousel_SliderState extends State<Home_Carousel_Slider> {
                         color: AppColors.appcolor,
                         borderRadius: BorderRadius.circular(16)),
                     alignment: Alignment.center,
-                    child: Image.asset(Assetspath.silder));
+                    child: Image.asset(Assetspath.silder,fit: BoxFit.cover,));
               },
             );
           }).toList(),
@@ -55,7 +55,8 @@ class _Home_Carousel_SliderState extends State<Home_Carousel_Slider> {
                       width: 20,
                       height: 20,
                       decoration: BoxDecoration(
-                          color: value==i?AppColors.appcolor: Colors.transparent ,
+                          color: value==i?Colors.white
+                              : Colors.transparent ,
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(color: Colors.grey)
                       ),
