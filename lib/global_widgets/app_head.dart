@@ -20,15 +20,12 @@ class AppHead extends StatelessWidget {
             Text("Let's Watch Today",style: TextStyle(color: Colors.grey,fontSize: 16),),
           ],
         ),
-        CircleAvatar(
-          maxRadius:28 ,
-          child: Center(
-              child: Image.asset(
-                Assetspath.appcircluar,
-                fit: BoxFit.fill,
-                width: 200,
-                height: 200,
-              )),
+        Container(
+          width: 120,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Image.asset(Assetspath.appcircluar),
         )
       ],
     );

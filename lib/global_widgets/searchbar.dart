@@ -39,8 +39,8 @@ class Searbar extends StatelessWidget {
           ),
         ),
         Container(
-          width: 80,
-          height: 80,
+          width: 60,
+          height: 60,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             color: Color.fromRGBO(255, 52, 64, 100),
