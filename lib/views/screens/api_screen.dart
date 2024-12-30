@@ -26,13 +26,18 @@ class _ApiScreenState extends State<ApiScreen> {
               itemBuilder: (context,index){
                 return Container(
                   height: 120,
-                  color: Colors.green,
+                  color: Colors.grey,
+                  margin: EdgeInsets.all(10),
                   child:  Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('user id:${facthdata[index].userId}',style: const TextStyle(fontSize: 16),),
-                      Text('Id:${facthdata[index].id}',style: const TextStyle(fontSize: 16),),
-                      Text('Title:${facthdata[index].title}',style: const TextStyle(fontSize: 16),),
-                      Text('Body:${facthdata[index].body}',style: const TextStyle(fontSize: 16),),
+                      Text('user id:${facthdata[index].userId}',style: const TextStyle(fontSize: 16,color: Colors.black45),),
+                      SizedBox(height: 4,),
+                      Text('Id:${facthdata[index].id}',style: const TextStyle(fontSize: 16,color: Colors.black45),),
+                      SizedBox(height: 4,),
+                      Text('Title:${facthdata[index].title}',style: const TextStyle(fontSize: 16,color: Colors.black45),maxLines: 1,),
+                      SizedBox(height: 4,),
+                      Text('Body:${facthdata[index].body}',style: const TextStyle(fontSize: 16,color: Colors.black45),maxLines: 1,),
                     ],
                   ),
                 );
