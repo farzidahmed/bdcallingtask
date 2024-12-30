@@ -32,7 +32,7 @@ class _Home_Carousel_SliderState extends State<Home_Carousel_Slider> {
               builder: (BuildContext context) {
                 return Container(
                     width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
                         color: AppColors.appcolor,
                         borderRadius: BorderRadius.circular(16)),
@@ -42,7 +42,7 @@ class _Home_Carousel_SliderState extends State<Home_Carousel_Slider> {
             );
           }).toList(),
         ),
-        SizedBox(height: 16,),
+        const SizedBox(height: 16,),
         ValueListenableBuilder(
             valueListenable: _selectedIndex,
             builder: (context, value,_) {
@@ -51,7 +51,7 @@ class _Home_Carousel_SliderState extends State<Home_Carousel_Slider> {
                 children: [
                   for(int i=0;i<5;i++)
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: 2),
+                      margin: const EdgeInsets.symmetric(horizontal: 2),
                       width: 20,
                       height: 20,
                       decoration: BoxDecoration(

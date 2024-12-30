@@ -1,7 +1,9 @@
 import 'package:bdcallingtask/constent/app_color.dart';
-import 'package:bdcallingtask/constent/assets_path.dart';
+import 'package:bdcallingtask/views/screens/api_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../global_widgets/action_button.dart';
 import '../../global_widgets/app_head.dart';
 import '../../global_widgets/continue_movies.dart';
 import '../../global_widgets/home_carousel_silder.dart';
@@ -30,7 +32,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(height: 16,),
             const Searbar(),
                 const SizedBox(height: 16,),
-                HomeSectionHeader(title: 'Category', ontap: () {  },),
+                HomeSectionHeader(title: 'Category', ontap: () {
+                  Get.to(ApiScreen());
+                },),
+                const SizedBox(height: 16,),
+                const ActionButton(),
                 const SizedBox(height: 16,),
                 const Home_Carousel_Slider(),
                 const SizedBox(height: 16,),
@@ -71,14 +77,15 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> _getcontinuemovies() {
     List<Widget> moviesitem = [];
     for (int i = 0; i < 5; i++) {
-      moviesitem.add(Padding(
-        padding: const EdgeInsets.only(right: 8),
+      moviesitem.add(const Padding(
+        padding: EdgeInsets.only(right: 8),
         child:  ContinueMovies(title: 'soul mates',),
       ));
     }
     return moviesitem;
   }
 }
+
 
 
 
